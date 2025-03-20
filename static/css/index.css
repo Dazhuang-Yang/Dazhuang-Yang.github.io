@@ -155,3 +155,22 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.latex-table {
+  margin: 1em auto;
+  font-family: Times New Roman, serif;
+  text-align: center;
+  width: 60%;
+}
+.latex-table th, .latex-table td {
+  /* border-bottom: 2px solid #afafaf; */
+  border-top: 1px solid #ddd;
+  padding: 8px;
+}
+.latex-table thead th {
+  background-color: #ffffff;
+}
+.latex-table caption {
+  font-weight: bold;
+  margin-bottom: 8px;
+}

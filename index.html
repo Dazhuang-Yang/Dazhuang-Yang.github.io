@@ -83,6 +83,8 @@
             <span class="author-block">
               <a>Dazhuang Yang</a>,</span>
             <span class="author-block">
+              <a>Jiafu Jiao</a>,</span>
+            <span class="author-block">
               <a>Yizhai Zhang</a>,</span>
             <span class="author-block">
               <a>Panfeng Huang</a></span>
@@ -118,8 +120,8 @@
               <!-- Dataset Link. -->
               <span class="link-block"> 
                 <!-- href="" -->
-                <a 
-                   class="external-link button is-normal is-rounded is-dark" onclick="alert('Will be coming soon')">
+                <a href="https://drive.google.com/drive/folders/1w16AACVh-1RRXbIkOZE7XNZL1KqBN9GN?usp=drive_link"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-database"></i>
                   </span>
@@ -142,7 +144,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Pose estimation and 3D reconstruction for Non-Cooperative Maneuvering Space Target (NCMST) are vital for enhancing spacecraft intelligence sensing capabilities. However, the challenges posed by unpredictable movements and the extreme space environment often complicate such processes. Therefore, this letter addresses the hurdles associated with reconstructing high-quality 3D models and achieves near-real-time parallel pose estimation for NCMST under limited viewing constraints. To address this issue, several contributions are proposed. First, a novel Neural Radiance Fields (NeRF) framework specifically designed for NCMST is suggested, enabling simultaneous pose estimation and 3D reconstruction. Second, to enhance the network's expressive capacity within constrained views, the integration of image encoding into the neural network's input is planned. Lastly, a simulator utilizing Unreal Engine 5 (UE5) is developed to replicate space's characteristics, thus creating a comprehensive RGB-D NCMST dataset and ensuring scalability for future navigation and control tasks. The achieved experiments validate the efficacy of the proposed NeRF framework, demonstrating its superior ability to achieve 3D reconstruction and simultaneous pose estimation for NCMST.
+            Accurate pose estimation and 3D reconstruction of Non-Cooperative Space Targets (NCST) are critical for proximity operations in active debris removal and on-orbit servicing. However, existing methods often rely on point-based representations, which face challenges in efficiency and reliability under sparse textures and dynamic conditions. This paper proposes a novel NeRF-based Simultaneous Pose Estimation and 3D Reconstruction (SPAR) to address these challenges. The framework integrates three key components: a multi-resolution hash encoder to reduce computational cost, pre-trained image features to enhance view generalization, and a direct method to stabilize pose estimation. Evaluations on a new Spacecraft Pose Estimation and 3D Reconstruction Dataset (SPARD), comprising both synthetic and real RGB-D images, demonstrate the framework's effectiveness. The framework achieving real-time processing at 51 Hz with a pose estimation accuracy of 1.26 cm translation error and 0.97° rotation error. The results show improvements over traditional and NeRF-based baselines, validating its applicability to space missions with NCST.
           </p>
         </div>
       </div>
@@ -161,16 +163,71 @@
 </section>
 
 
+<table class="latex-table">
+  <caption>Pose estimation results on NCMST.</caption>
+    <thead>
+        <tr style="border-top: 2px solid #000;">
+          <th rowspan="2" colspan="2"></th>
+          <th colspan="2">ATE</th>
+          <th colspan="2">RPE</th>
+          <th rowspan="2">Runtime<br>(Hz)</th>
+        </tr>
+        <tr style="border-bottom: 2px solid #000;">
+            <th>Rot. (deg)</th>
+            <th>Trans. (cm)</th>
+            <th>Rot. (deg)</th>
+            <th>Trans. (cm)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">Case 1</td>
+            <td>Ours</td>
+            <td>0.97</td>
+            <td><strong>1.26</strong></td>
+            <td><strong>0.27</strong></td>
+            <td><strong>0.21</strong></td>
+            <td><strong>65.86</strong></td>
+        </tr>
+        <tr>
+            <td>ORB-SLAM2</td>
+            <td><strong>0.49</strong></td>
+            <td>2.31</td>
+            <td>0.28</td>
+            <td>0.44</td>
+            <td class="italic">25.64</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Case 4</td>
+            <td>Ours</td>
+            <td><strong>4.69</strong></td>
+            <td><strong>3.63</strong></td>
+            <td>0.50</td>
+            <td><strong>0.30</strong></td>
+            <td><strong>62.45</strong></td>
+        </tr>
+        <tr style="border-bottom: 2px solid #000;">
+            <td>ORB-SLAM2</td>
+            <td>5.51</td>
+            <td>4.15</td>
+            <td><strong>0.47</strong></td>
+            <td>0.32</td>
+            <td class="italic">26.49</td>
+        </tr>
+    </tbody>
+</table>
+
+
 
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Dazhuang, Yang and Yizhai, Zhang and Panfeng, Huang},
+    <pre><code>@article{Yang2025NSPAR,
+  author    = {Dazhuang, Yang and Jiafu, Jiao and Yizhai, Zhang and Panfeng, Huang},
   title     = {Neural-based Pose Estimation and 3D Reconstruction for Non-Cooperative Maneuvering Space Target},
-  year      = {2021},
+  year      = {2025},
 }</code></pre>
   </div>
 </section>
