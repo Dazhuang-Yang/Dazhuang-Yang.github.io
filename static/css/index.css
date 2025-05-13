@@ -2,6 +2,9 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.non-selectable {
+  user-select: none;
+}
 
 .footer .icon-link {
     font-size: 25px;
@@ -173,4 +176,111 @@ body {
 .latex-table caption {
   font-weight: bold;
   margin-bottom: 8px;
+}
+#container {
+  /* width: 400px; */
+  height: 250px;
+  overflow: hidden;
+  }
+#photo {
+  /* width: 1200px; */
+  animation: switch 5s ease-out infinite;
+  }
+  #photo > img {
+  float: left;
+  width: auto;
+  height: 250px;
+  }
+  @keyframes switch {
+  0%, 25% {
+  margin-left: 0px;
+  }
+  35%, 60% {
+  margin-left: -400px;
+  }
+  70%, 100% {
+  margin-left: -600px;
+  }
+  }
+
+
+.c {
+  min-width: 100px;
+  /* width: 700px; */
+  height: 250px;
+  padding: 20px;
+  padding-bottom: 10px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+
+  position: relative;
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+.ci {
+  position: absolute;
+  top: 0;
+  left: 10;
+
+  width: inherit;
+  height: inherit;
+  transform-origin: left 50%;
+
+
+  z-index: var(--z);
+  transition: .3s ease-out;
+}
+
+.ci img {
+  -moz-user-select: none;
+  user-select: none;
+}
+
+input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: -15;
+}
+
+label {
+  width: 12px;
+  height: 8px;
+  margin-right: 4px;
+  border-radius: 20px;
+
+  background: hsla(0, 0%, 51%, 0.514);
+  cursor: pointer;
+
+  position: relative;
+  left: -10px;
+  z-index: 10;
+}
+
+label:last-child {
+  margin-right: 0;
+}
+
+input:checked+label {
+  background: linear-gradient(to right,
+    hsla(var(--hue) 80% 70% / .7),
+    hsla(calc(var(--hue) + 30) 80% 50% / .7));
+}
+
+input:not(:checked)+label+.ci {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+input:checked+label+.ci~.ci {
+  transform: translateX(100%);
+}
+
+input:not(:checked)+label+.ci {
+  transition: 0;
 }

@@ -75,4 +75,15 @@ $(document).ready(function() {
 
     bulmaSlider.attach();
 
-})
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const radios = document.querySelectorAll('input[name="a"]');
+  let currentIndex = 0;
+
+  setInterval(() => {
+    radios[currentIndex].checked = false; // Uncheck the current radio
+    currentIndex = (currentIndex + 1) % radios.length; // Move to the next index
+    radios[currentIndex].checked = true; // Check the next radio
+  }, 8000); // Change every 3 seconds
+});

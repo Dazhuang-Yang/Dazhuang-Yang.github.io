@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Neural-based Pose Estimation and 3D Reconstruction for Non-Cooperative Maneuvering Space Target</title>
+  <title>NeRF-based Simultaneous Pose Estimation and 3D Reconstruction for Non-Cooperative Space Target</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -78,29 +78,33 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Neural-based Pose Estimation and 3D Reconstruction for Non-Cooperative Maneuvering Space Target</h1>
+          <h1 class="title is-1 publication-title">NeRF-based Simultaneous Pose Estimation and 3D Reconstruction for Non-Cooperative Space Target</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a>Dazhuang Yang</a>,</span>
+              <a href="https://www.researchgate.net/profile/Dazhuang-Yang">Dazhuang Yang<sup>1</sup></a>,</span>
             <span class="author-block">
-              <a>Jiafu Jiao</a>,</span>
+              <a>Yizhai Zhang<sup>1</sup></a>,</span>
             <span class="author-block">
-              <a>Yizhai Zhang</a>,</span>
+              <a>Ge Yu<sup>2</sup></a>,</span>
             <span class="author-block">
-              <a>Panfeng Huang</a></span>
+              <a>Jiafu Jiao<sup>1</sup></a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=-eey0pkAAAAJ">Binglu Wang<sup>1</sup></a>,</span>
+            <span class="author-block">
+              <a href="https://www.researchgate.net/profile/Panfeng-Huang">Panfeng Huang<sup>1</sup></a></span>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Northwestern Polytechnical University, Xi'an, China</span>
+            <span class="author-block">1. Northwestern Polytechnical University, Xi'an, China</span>
+            <span class="author-block">2. Shanghai Aerospace System Engineering, Shanghai, China</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="./root.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
+                <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" onclick="alert('The paper link will be provided after publication.')">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
@@ -143,8 +147,8 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            Accurate pose estimation and 3D reconstruction of Non-Cooperative Space Targets (NCST) are critical for proximity operations in active debris removal and on-orbit servicing. However, existing methods often rely on point-based representations, which face challenges in efficiency and reliability under sparse textures and dynamic conditions. This paper proposes a novel NeRF-based Simultaneous Pose Estimation and 3D Reconstruction (SPAR) to address these challenges. The framework integrates three key components: a multi-resolution hash encoder to reduce computational cost, pre-trained image features to enhance view generalization, and a direct method to stabilize pose estimation. Evaluations on a new Spacecraft Pose Estimation and 3D Reconstruction Dataset (SPARD), comprising both synthetic and real RGB-D images, demonstrate the framework's effectiveness. The framework achieving real-time processing at 51 Hz with a pose estimation accuracy of 1.26 cm translation error and 0.97° rotation error. The results show improvements over traditional and NeRF-based baselines, validating its applicability to space missions with NCST.
+          <p aria-hidden="true">
+            Accurate pose estimation and 3D reconstruction of Non-Cooperative Space Targets (NCSTs) are critical for proximity operations in active debris removal and on-orbit servicing. In this paper, we propose a novel NeRF-based Simultaneous Pose Estimation and 3D Reconstruction (SPAR) framework to address the challenges of efficiency and reliability in traditional point-based methods, which contains three key components, \ie a multi-resolution hash encoder to reduce computational cost, a 2D keyframe feature enhancement to guide view generalization, and a direct photometric constraint to stabilize pose estimation. Furthermore, the proposed framework is evaluated on a newly constructed Spacecraft Pose Estimation and 3D Reconstruction Dataset (SPARD), comprising both synthetic and real RGB-D images and the experimental results demonstrate its effectiveness. Our framework achieves real-time processing at 51 Hz with a pose estimation accuracy of 1.26 cm translation error and 0.97° rotation error. The results show improvements over traditional and NeRF-based baselines, validating its applicability to space missions with NCST.
           </p>
         </div>
       </div>
@@ -162,59 +166,125 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+        <h2 class="title is-3">Dataset Construction</h2>
+    </div>
+    <div class="column">
+      <div class="columns">
+        <div class="column">
+          <h3 class="title is-5">Synthetic Scene Setup</h3>
+            <img src="./static/images/synthetic.svg" alt="Pipeline Image" style="max-height: 250px; width: auto;">
+        </div>
+        <div class="column">
+          <h3 class="title is-5">Real Scene Setup</h3>
+          <div class="c">
+              <input type="radio" name="a" id="cr-1" checked>
+              <label for="cr-1" style="--hue: 130"></label>
+              <div class="ci" style="--z: 4">
+                <img src="./static/images/real.svg" alt="Pipeline Image" style="max-height: 250px; width: auto;">
+              </div>
+
+              <input type="radio" name="a" id="cr-2">
+              <label for="cr-2" style="--hue: 0"></label>
+              <div class="ci" style="--z: 3">
+                <img src="./static/images/real2.svg" alt="Pipeline Image" style="max-height: 250px; width: auto;">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    
+  </div>
+</section>
+
 
 <table class="latex-table">
-  <caption>Pose estimation results on NCMST.</caption>
-    <thead>
-        <tr style="border-top: 2px solid #000;">
-          <th rowspan="2" colspan="2"></th>
-          <th colspan="2">ATE</th>
-          <th colspan="2">RPE</th>
-          <th rowspan="2">Runtime<br>(Hz)</th>
-        </tr>
-        <tr style="border-bottom: 2px solid #000;">
-            <th>Rot. (deg)</th>
-            <th>Trans. (cm)</th>
-            <th>Rot. (deg)</th>
-            <th>Trans. (cm)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan="2">Case 1</td>
-            <td>Ours</td>
-            <td>0.97</td>
-            <td><strong>1.26</strong></td>
-            <td><strong>0.27</strong></td>
-            <td><strong>0.21</strong></td>
-            <td><strong>65.86</strong></td>
-        </tr>
-        <tr>
-            <td>ORB-SLAM2</td>
-            <td><strong>0.49</strong></td>
-            <td>2.31</td>
-            <td>0.28</td>
-            <td>0.44</td>
-            <td class="italic">25.64</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Case 4</td>
-            <td>Ours</td>
-            <td><strong>4.69</strong></td>
-            <td><strong>3.63</strong></td>
-            <td>0.50</td>
-            <td><strong>0.30</strong></td>
-            <td><strong>62.45</strong></td>
-        </tr>
-        <tr style="border-bottom: 2px solid #000;">
-            <td>ORB-SLAM2</td>
-            <td>5.51</td>
-            <td>4.15</td>
-            <td><strong>0.47</strong></td>
-            <td>0.32</td>
-            <td class="italic">26.49</td>
-        </tr>
-    </tbody>
+  <caption>Pose estimation results on NCST.</caption>
+  <thead>
+    <tr style="border-top: 2px solid #000;">
+      <th rowspan="2" colspan="2"></th>
+      <th colspan="2">ATE</th>
+      <th colspan="2">RPE</th>
+    </tr>
+    <tr style="border-bottom: 2px solid #000;">
+      <th>Rot. (deg)</th>
+      <th>Trans. (cm)</th>
+      <th>Rot. (deg)</th>
+      <th>Trans. (cm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">Case 2 (Virtual)</td>
+      <td>Ours</td>
+      <td>0.97</td>
+      <td><strong>1.26</strong></td>
+      <td><strong>0.27</strong></td>
+      <td><strong>0.21</strong></td>
+    </tr>
+    <tr>
+      <td>ORB-SLAM2</td>
+      <td><strong>0.49</strong></td>
+      <td>2.31</td>
+      <td>0.28</td>
+      <td>0.44</td>
+    </tr>
+    <tr>
+      <td>w/o NeRF</td>
+      <td>0.89</td>
+      <td>1.23</td>
+      <td>0.16</td>
+      <td>0.13</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Case 4 (Virtual)</td>
+      <td>Ours</td>
+      <td><strong>5.44</strong></td>
+      <td><strong>2.03</strong></td>
+      <td><strong>0.38</strong></td>
+      <td><strong>0.06</strong></td>
+    </tr>
+    <tr>
+      <td>ORB-SLAM2</td>
+      <td>5.46</td>
+      <td>4.09</td>
+      <td>0.38</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <td>w/o NeRF</td>
+      <td>5.25</td>
+      <td>3.95</td>
+      <td>0.40</td>
+      <td>0.14</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Case 1 (Real)</td>
+      <td>Ours</td>
+      <td><strong>16.14</strong></td>
+      <td><strong>10.24</strong></td>
+      <td><strong>2.57</strong></td>
+      <td><strong>0.89</strong></td>
+    </tr>
+    <tr>
+      <td>ORB-SLAM2</td>
+      <td>17.99</td>
+      <td>22.54</td>
+      <td>2.66</td>
+      <td>1.26</td>
+    </tr>
+    <tr style="border-bottom: 2px solid #000;">
+      <td>w/o NeRF</td>
+      <td>16.51</td>
+      <td>11.13</td>
+      <td>2.66</td>
+      <td>1.52</td>
+    </tr>
+  </tbody>
 </table>
 
 
@@ -225,8 +295,8 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{Yang2025NSPAR,
-  author    = {Dazhuang, Yang and Jiafu, Jiao and Yizhai, Zhang and Panfeng, Huang},
-  title     = {Neural-based Pose Estimation and 3D Reconstruction for Non-Cooperative Maneuvering Space Target},
+  author    = {Dazhuang, Yang and Yizhai, Zhang and Ge, Yu and Jiafu, Jiao and Binglu, Wang and Panfeng, Huang},
+  title     = {NeRF-based Simultaneous Pose Estimation and 3D Reconstruction for Non-Cooperative Space Target},
   year      = {2025},
 }</code></pre>
   </div>
