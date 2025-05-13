@@ -78,12 +78,17 @@ $(document).ready(function() {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const radios = document.querySelectorAll('input[name="a"]');
+  const radios = document.querySelectorAll('input[name="a1"]');
+  const radios2 = document.querySelectorAll('input[name="a"]');
   let currentIndex = 0;
+  let currentIndex2 = 0;
 
   setInterval(() => {
     radios[currentIndex].checked = false; // Uncheck the current radio
     currentIndex = (currentIndex + 1) % radios.length; // Move to the next index
     radios[currentIndex].checked = true; // Check the next radio
+    radios2[currentIndex2].checked = false; // Uncheck the current radio
+    currentIndex2 = (currentIndex2 + 1) % radios2.length; // Move to the next index
+    radios2[currentIndex2].checked = true; // Check the next radio
   }, 8000); // Change every 3 seconds
 });

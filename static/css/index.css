@@ -177,32 +177,6 @@ body {
   font-weight: bold;
   margin-bottom: 8px;
 }
-#container {
-  /* width: 400px; */
-  height: 250px;
-  overflow: hidden;
-  }
-#photo {
-  /* width: 1200px; */
-  animation: switch 5s ease-out infinite;
-  }
-  #photo > img {
-  float: left;
-  width: auto;
-  height: 250px;
-  }
-  @keyframes switch {
-  0%, 25% {
-  margin-left: 0px;
-  }
-  35%, 60% {
-  margin-left: -400px;
-  }
-  70%, 100% {
-  margin-left: -600px;
-  }
-  }
-
 
 .c {
   min-width: 100px;
