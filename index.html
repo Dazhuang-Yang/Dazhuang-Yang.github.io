@@ -180,12 +180,12 @@
     <div class="column">
       <div class="columns">
         <div class="column">
-          <h3 class="title is-5">Synthetic Scene Setup</h3>
+          <h3 class="title is-4" style="text-align: center;">Synthetic Scene Setup</h3>
           <div class="c">
             <input type="radio" name="a1" id="cr-1" checked>
-            <label for="cr-1" style="--hue: 130"></label>
+            <label for="cr-1" style="--hue:130"></label>
             <div class="ci" style="--z: 4">
-              <img src="./static/images/synthetic.svg" alt="Pipeline Image" style="height: 250px; width: auto;">
+              <img src="./static/images/synthetic.svg" alt="Synthetic Scene" style="height: 250px; width: auto;">
             </div>
 
             <input type="radio" name="a1" id="cr-2">
@@ -199,18 +199,18 @@
           </div>
         </div>
         <div class="column">
-          <h3 class="title is-5">Real Scene Setup</h3>
+          <h3 class="title is-4",  style="text-align: center;">Real Scene Setup</h3>
           <div class="c">
               <input type="radio" name="a" id="cr-3" checked>
               <label for="cr-3" style="--hue: 130"></label>
               <div class="ci" style="--z: 4">
-                <img src="./static/images/real.svg" alt="Pipeline Image" style="max-height: 250px; width: auto;">
+                <img src="./static/images/real.svg" alt="Real Scene" style="max-height: 250px; width: auto;">
               </div>
 
               <input type="radio" name="a" id="cr-4">
               <label for="cr-4" style="--hue: 0"></label>
               <div class="ci" style="--z: 3">
-                <img src="./static/images/real2.svg" alt="Pipeline Image" style="max-height: 250px; width: auto;">
+                <img src="./static/images/real2.svg" alt="Real Scene2" style="max-height: 250px; width: auto;">
               </div>
           </div>
         </div>
@@ -227,93 +227,59 @@
     <div class="columns is-centered">
         <h2 class="title is-3">Experiment Results</h2>
     </div>
-  </div>
-</section>
+    <div class="column">
+      <div class="columns is-centered">
+          <h3 class="title is-4" style="text-align: center;">Pose Estimation</h3>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+        <img src="./static/videos/Case2_traj.gif" alt="Pose Estimation" style="max-height: 250px; width: auto;">
+        <h3 class="title is-6" style="text-align: center;">(a) The circular trajectory</h3>
+        </div>
+        <div class="column">
+          <img src="./static/videos/Case4_traj.gif" alt="Pose Estimation" style="max-height: 250px; width: auto;">
+          <h3 class="title is-6" style="text-align: center;">(b) The conical spiral trajectory</h3>
+        </div>
+      </div>
+    </div>
 
-<table class="latex-table">
-  <caption>Pose estimation results on NCST.</caption>
-  <thead>
-    <tr style="border-top: 2px solid #000;">
-      <th rowspan="2" colspan="2"></th>
-      <th colspan="2">ATE</th>
-      <th colspan="2">RPE</th>
-    </tr>
-    <tr style="border-bottom: 2px solid #000;">
-      <th>Rot. (deg)</th>
-      <th>Trans. (cm)</th>
-      <th>Rot. (deg)</th>
-      <th>Trans. (cm)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="3">Case 2 (Virtual)</td>
-      <td>Ours</td>
-      <td>0.97</td>
-      <td><strong>1.26</strong></td>
-      <td><strong>0.27</strong></td>
-      <td><strong>0.21</strong></td>
-    </tr>
-    <tr>
-      <td>ORB-SLAM2</td>
-      <td><strong>0.49</strong></td>
-      <td>2.31</td>
-      <td>0.28</td>
-      <td>0.44</td>
-    </tr>
-    <tr>
-      <td>w/o NeRF</td>
-      <td>0.89</td>
-      <td>1.23</td>
-      <td>0.16</td>
-      <td>0.13</td>
-    </tr>
-    <tr>
-      <td rowspan="3">Case 4 (Virtual)</td>
-      <td>Ours</td>
-      <td><strong>5.44</strong></td>
-      <td><strong>2.03</strong></td>
-      <td><strong>0.38</strong></td>
-      <td><strong>0.06</strong></td>
-    </tr>
-    <tr>
-      <td>ORB-SLAM2</td>
-      <td>5.46</td>
-      <td>4.09</td>
-      <td>0.38</td>
-      <td>0.24</td>
-    </tr>
-    <tr>
-      <td>w/o NeRF</td>
-      <td>5.25</td>
-      <td>3.95</td>
-      <td>0.40</td>
-      <td>0.14</td>
-    </tr>
-    <tr>
-      <td rowspan="3">Case 1 (Real)</td>
-      <td>Ours</td>
-      <td><strong>16.14</strong></td>
-      <td><strong>10.24</strong></td>
-      <td><strong>2.57</strong></td>
-      <td><strong>0.89</strong></td>
-    </tr>
-    <tr>
-      <td>ORB-SLAM2</td>
-      <td>17.99</td>
-      <td>22.54</td>
-      <td>2.66</td>
-      <td>1.26</td>
-    </tr>
-    <tr style="border-bottom: 2px solid #000;">
-      <td>w/o NeRF</td>
-      <td>16.51</td>
-      <td>11.13</td>
-      <td>2.66</td>
-      <td>1.52</td>
-    </tr>
-  </tbody>
-</table>
+    <div class="columns is-centered">
+        <h3 class="title is-4" style="text-align: center;">3D Reconstruction</h3>
+    </div>
+    <div class="columns is-centered">
+      
+      <div class="column", style="width: 30%">
+        <img src="./static/images/ssta1r_ce1.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <img src="./static/images/ssta1r_ce2.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <img src="./static/images/ssta1r_de1.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <img src="./static/images/ssta1r_de2.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <h3 class="title is-6" style="text-align: center;">(a) Smart Satellite 1A (Real)</h3>
+      </div>
+      <div class="column", style="width: 30%">
+        <img src="./static/images/ssta1_ce1.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <img src="./static/images/ssta1_ce2.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <img src="./static/images/ssta1_de1.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <img src="./static/images/ssta1_de2.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <h3 class="title is-6" style="text-align: center;">(b) Smart Satellite 1A (Virtual)</h3>
+      </div>
+      <div class="column", style="width: 30%">
+        <img src="./static/images/venus_ce1.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <img src="./static/images/venus_ce2.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <img src="./static/images/venus_de1.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <img src="./static/images/venus_de2.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <h3 class="title is-6" style="text-align: center;">(c) Venus Express</h3>
+      </div>
+      <div class="column", style="width: 30%">
+        <img src="./static/images/proba2_ce1.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <img src="./static/images/proba2_ce2.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <img src="./static/images/proba2_de1.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <img src="./static/images/proba2_de2.png" alt="3D Reconstruction" style="max-height: 250px; width: 48%;">
+        <h3 class="title is-6" style="text-align: center;">(d) Proba-2</h3>
+      </div>
+    </div>
+  </div>
+
+</section>
 
 
 
